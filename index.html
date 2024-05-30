@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conway's Game of Life</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <h1 style="text-align: center;">Welcome to Conway's Game of Life!</h1>
+    <div class="explanation-box">
+        <p>
+            Conway's Game of Life is a "cellular automata", made up of "alive" and
+            "dead" cells, which are normally represented by black and white squares.
+            At each step, alive cells can die, and dead cells can become alive according
+            to four simple rules:
+        </p>
+        <ol>
+            <li>Any live cell with fewer than two live neighbors dies, as if by underpopulation.</li>
+            <li>Any live cell with two or three live neighbors lives on to the next generation.</li>
+            <li>Any live cell with more than three live neighbors dies, as if by overpopulation.</li>
+            <li>Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.</li>
+        </ol>
+        <p>
+            Even though the rules governing the simulation are really simple,
+            remarkably complex behaviour can emerge, in fact Conway's Game of Life
+            is Turing complete, so you can actually use it to do computations!
+        </p>
+        <p>
+            Below you can play around with this deceptively simple game, and see what you
+            discover. Click on cells left box to turn dead cells live, and live cells dead.
+            You can adjust the field size and delay between steps in the simulation
+            (click submit to apply changes). Finally hit start to see the simulation come to life!
+        </p>
+        <p>
+            Hope you enjoy!
+        </p>
+    </div>
+    <div class="game-container">
+        <div class="settings-box">
+            <h2 style="text-align: center;">Settings</h2>
+            <div class="slider-box">
+                <p id="size-slider-value">Size of Field in Cells: 10</p>
+                <input id="size-slider" type="range" min="5" max="50" step="5" value="10" class="inslider">
+                <br>
+                <p id="time-slider-value" style="width: 250px;">Time Delay Between Steps: 500ms</p>
+                <input id="time-slider" type="range" min="1" max="10" step="1" value="5" class="inslider">
+            </div>
+            <div class="button-box">
+                <button id="submit-button" class="button-4">Submit</button>
+                <button id="start-button" class="button-4">Start</button>
+                <button id="stop-button" class="button-4">Stop</button>
+            </div>
+        </div>
+        <div class="board-box">
+            <canvas id="board"></canvas>
+        </div>
+    </div>
+    <script type="text/javascript" src="conways.js"></script>
+</body>
+
+</html>
