@@ -44,11 +44,11 @@
 }
 
 #start-button{
-  background-color: #0dd402;
+  background: #0dd402;
 }
 
 #stop-button{
-  background-color:red;
+  background:red;
 }
 
 .inslider {
